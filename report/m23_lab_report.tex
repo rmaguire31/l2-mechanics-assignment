@@ -24,10 +24,10 @@
 \usepackage{xspace}
 \usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=nonfrench,factor=1100,stretch=10,shrink=10]{microtype}
 % activate={true,nocompatibility} - activate protrusion and expansion
-% final - enable microtype; use "draft" to disable
-% tracking=true, kerning=true, spacing=true - activate these techniques
-% factor=1100 - add 10% to the protrusion amount (default is 1000)
-% stretch=10, shrink=10 - reduce stretchability/shrinkability (default is 20/20)
+% final - enable microtype; use "draft" to disable tracking=true, kerning=true,
+% spacing=true - activate these techniques factor=1100 - add 10% to the
+% protrusion amount (default is 1000) stretch=10, shrink=10 - reduce
+% stretchability/shrinkability (default is 20/20)
 
 % Reduce tracking around small caps to 40%
 \SetTracking{encoding={*}, shape=sc}{40}
@@ -45,7 +45,7 @@
 % Setup nomenclature.
 \newlength{\nomtitlesep}
 \setlength{\nomtitlesep}{\nomitemsep}
-\setlength{\nomitemsep}{-\parsep}
+\setlength{\nomitemsep}{-0\parsep}
 \renewcommand\nomgroup[1]{
     \ifthenelse{\equal{#1}{A}}{
         \itemsep\nomtitlesep
@@ -53,9 +53,17 @@
         \itemsep\nomitemsep}{
     \ifthenelse{\equal{#1}{B}}{
         \itemsep\nomtitlesep
-        \item[\textbf{Variables}]
+        \item[\textbf{Theory}]
         \itemsep\nomitemsep}{
-}}}
+    \ifthenelse{\equal{#1}{C}}{
+        \itemsep\nomtitlesep
+        \item[\textbf{Experiment}]
+        \itemsep\nomitemsep}{
+    \ifthenelse{\equal{#1}{D}}{
+        \itemsep\nomtitlesep
+        \item[\textbf{Simulation}]
+        \itemsep\nomitemsep}{
+}}}}}
 \newcommand{\nomindex}[1]{
     \hspace*{\fill}
     \makebox[5em][l]{#1}
@@ -63,7 +71,7 @@
 \makenomenclature
 
 % Setup bibiliography.
-\addbibresource{bibliography}
+\addbibresource{m23_lab_report.bib}
 
 % Header and footer.
 \pagestyle{fancy}
@@ -94,6 +102,9 @@
 \twocolumn[
 \begin{@twocolumnfalse}
     \begin{abstract}
+        In this report it is detailed how experimentation and computational
+        simulation were used to investigate how stress and strain concentrations
+        in plates vary around features.
     \end{abstract}
 \end{@twocolumnfalse}
 \vspace{\parsep}
@@ -101,7 +112,51 @@
 
 % Acronyms
 
-% Variables
+% Theory
+\nomenclature[B00]{$E$}{Young's modulus of elasticity
+    \hspace{\fill}\si{\giga\pascal}}
+\nomenclature[B01]{$S$}{Far-field stress
+    \hspace{\fill}\si{\mega\pascal}}
+\nomenclature[B02]{$k_\epsilon$}{Strain concentration
+    \hspace{\fill}---}
+\nomenclature[B03]{$k_\sigma$}{Stress concentration
+    \hspace{\fill}---}
+\nomenclature[B04]{$\gamma_{uv}$}{Shear strain in $uv$-plane
+    \hspace{\fill}\si{\micro}}
+\nomenclature[B05]{$\epsilon_{nom}$}{Nominal strain
+    \hspace{\fill}\si{\micro}}
+\nomenclature[B06]{$\epsilon_{uu}$}{Normal strain in $u$-direction
+    \hspace{\fill}\si{\micro}}
+\nomenclature[B07]{$\nu$}{Poisson's ratio
+    \hspace{\fill}---}
+\nomenclature[B08]{$\sigma_{nom}$}{Nominal stress
+    \hspace{\fill}\si{\mega\pascal}}
+\nomenclature[B09]{$\sigma_{uu}$}{Normal stress in $u$-direction
+    \hspace{\fill}\si{\mega\pascal}}
+\nomenclature[B10]{$\sigma_{uv}$}{Shear stress in $uv$-plane
+    \hspace{\fill}\si{\mega\pascal}}
+
+% Experiment
+\nomenclature[C0]{$k_{\epsilon i}$}{Strain concentration at gauge $i$
+    \hspace{\fill}---}
+\nomenclature[C1]{$k_{\sigma i}$}{Stress concentration at gauge $i$
+    \hspace{\fill}---}
+\nomenclature[C2]{$\epsilon_i$}{Strain at gauge $i$
+    \hspace{\fill}\si{\micro}}
+\nomenclature[C3]{$\sigma_i$}{Stress at gauge $i$
+    \hspace{\fill}\si{\mega\pascal}}
+\nomenclature[C4]{$\sigma_{max}$}{Maximum plate stress
+    \hspace{\fill}\si{\mega\pascal}}
+
+% Simulation
+\nomenclature[D0]{$H$}{Height of plate
+    \hspace{\fill}\si{\milli\meter}}
+\nomenclature[D1]{$L$}{Length of plate
+    \hspace{\fill}\si{\milli\meter}}
+\nomenclature[D2]{$d$}{Height of plate feature
+    \hspace{\fill}\si{\milli\meter}}
+\nomenclature[D3]{$r$}{Radius of plate feature
+    \hspace{\fill}\si{\milli\meter}}
 
 \printnomenclature
 
@@ -109,7 +164,19 @@
 \section{Theory}
 \section{Method}
 \subsection{Experiment}
-\subsection{Computation}
+
+\begin{figure}[h] \label{fig:experiment_dims}
+    \def\svgwidth{0.48\textwidth}
+    \input{img/experiment_dims.pdf_tex}
+    \caption{Dimensions of plate used in experiment.}
+\end{figure}
+\begin{figure}[h] \label{fig:experiment_gauges}
+    \def\svgwidth{0.48\textwidth}
+    \input{img/experiment_gauges.pdf_tex}
+    \caption{Positions of strain gauges on plate used in experiment.}
+\end{figure}
+
+\subsection{Simulation}
 \section{Discussion}
 \section{Conclusions}
 
@@ -117,3 +184,4 @@
 \printbibliography
 
 \end{document}
+\label{fig:experiment_dims}
