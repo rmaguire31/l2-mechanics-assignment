@@ -20,19 +20,15 @@
 \usepackage{float}
 
 \usepackage{varioref}
-\usepackage{textcomp}
 \usepackage{xspace}
 \usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=nonfrench,factor=1100,stretch=10,shrink=10]{microtype}
-% activate={true,nocompatibility} - activate protrusion and expansion
-% final - enable microtype; use "draft" to disable tracking=true, kerning=true,
+% activate={true,nocompatibility} - activate protrusion and expansion final -
+% enable microtype; use "draft" to disable tracking=true, kerning=true,
 % spacing=true - activate these techniques factor=1100 - add 10% to the
 % protrusion amount (default is 1000) stretch=10, shrink=10 - reduce
-% stretchability/shrinkability (default is 20/20)
-
-% Reduce tracking around small caps to 40%
+% stretchability/shrinkability (default is 20/20) Reduce tracking around small
+% caps to 40%
 \SetTracking{encoding={*}, shape=sc}{40}
-\newcommand{\Textregistered}{\textsuperscript{\textregistered}\xspace}
-\newcommand{\Texttrademark}{\texttrademark\xspace}
 
 % Document info.
 \author{Z0966990}
@@ -69,6 +65,12 @@
     \makebox[5em][l]{#1}
 }
 \makenomenclature
+
+% Units.
+\newcommand{\GPa}{\si{\giga\pascal}\xspace}
+\newcommand{\MPa}{\si{\mega\pascal}\xspace}
+\newcommand{\mm}{\si{\milli\meter}\xspace}
+\newcommand{\micro}{\si{\micro}\xspace}
 
 % Setup bibiliography.
 \addbibresource{m23_lab_report.bib}
@@ -111,30 +113,32 @@
 ]
 
 % Acronyms
+\nomenclature[A0]{CSA}{Computational stress analysis}
+\nomenclature[A1]{FEA}{Finite element analysis}
 
 % Theory
 \nomenclature[B00]{$E$}{Young's modulus of elasticity
-    \hspace{\fill}\si{\giga\pascal}}
+    \hspace{\fill}\GPa}
 \nomenclature[B01]{$S$}{Far-field stress
-    \hspace{\fill}\si{\mega\pascal}}
+    \hspace{\fill}\MPa}
 \nomenclature[B02]{$k_\epsilon$}{Strain concentration
     \hspace{\fill}---}
 \nomenclature[B03]{$k_\sigma$}{Stress concentration
     \hspace{\fill}---}
 \nomenclature[B04]{$\gamma_{uv}$}{Shear strain in $uv$-plane
-    \hspace{\fill}\si{\micro}}
+    \hspace{\fill}\micro}
 \nomenclature[B05]{$\epsilon_{nom}$}{Nominal strain
-    \hspace{\fill}\si{\micro}}
+    \hspace{\fill}\micro}
 \nomenclature[B06]{$\epsilon_{uu}$}{Normal strain in $u$-direction
-    \hspace{\fill}\si{\micro}}
+    \hspace{\fill}\micro}
 \nomenclature[B07]{$\nu$}{Poisson's ratio
     \hspace{\fill}---}
 \nomenclature[B08]{$\sigma_{nom}$}{Nominal stress
-    \hspace{\fill}\si{\mega\pascal}}
+    \hspace{\fill}\MPa}
 \nomenclature[B09]{$\sigma_{uu}$}{Normal stress in $u$-direction
-    \hspace{\fill}\si{\mega\pascal}}
+    \hspace{\fill}\MPa}
 \nomenclature[B10]{$\sigma_{uv}$}{Shear stress in $uv$-plane
-    \hspace{\fill}\si{\mega\pascal}}
+    \hspace{\fill}\MPa}
 
 % Experiment
 \nomenclature[C0]{$k_{\epsilon i}$}{Strain concentration at gauge $i$
@@ -142,21 +146,21 @@
 \nomenclature[C1]{$k_{\sigma i}$}{Stress concentration at gauge $i$
     \hspace{\fill}---}
 \nomenclature[C2]{$\epsilon_i$}{Strain at gauge $i$
-    \hspace{\fill}\si{\micro}}
+    \hspace{\fill}\micro}
 \nomenclature[C3]{$\sigma_i$}{Stress at gauge $i$
-    \hspace{\fill}\si{\mega\pascal}}
+    \hspace{\fill}\MPa}
 \nomenclature[C4]{$\sigma_{max}$}{Maximum plate stress
-    \hspace{\fill}\si{\mega\pascal}}
+    \hspace{\fill}\MPa}
 
 % Simulation
 \nomenclature[D0]{$H$}{Height of plate
-    \hspace{\fill}\si{\milli\meter}}
+    \hspace{\fill}\mm}
 \nomenclature[D1]{$L$}{Length of plate
-    \hspace{\fill}\si{\milli\meter}}
+    \hspace{\fill}\mm}
 \nomenclature[D2]{$d$}{Height of plate feature
-    \hspace{\fill}\si{\milli\meter}}
+    \hspace{\fill}\mm}
 \nomenclature[D3]{$r$}{Radius of plate feature
-    \hspace{\fill}\si{\milli\meter}}
+    \hspace{\fill}\mm}
 
 \printnomenclature
 
@@ -189,20 +193,18 @@
 \end{figure}
 
 In practice, the plate detailed in Figure~\ref{fig:simulation_dims} was modelled
-with the feature height $d$ kept constant at 100~\si{\milli\meter}. To
-investigate the effects of varying the ratio $H/d$, the simulations were run
-with $H$ at 110~\si{\milli\meter}, 130~\si{\milli\meter} and 200~\si
-{\milli\meter}. For each $H$ value, $r/d$ was also varied by running the
-simulations with six different feature radiuses in the range
-5~\si{\milli\meter}--10~\si{\milli\meter}.
+with the feature height $d$ kept constant at 100~\mm. To investigate the effects
+of varying the ratio $H/d$, the simulations were run with $H$ at 110~\mm,
+130~\mm and 200~\mm. For each $H$ value, $r/d$ was also varied by running the
+simulations with six different feature radiuses in the range 5~\mm--10~\mm.
 
 $L$ was chosen to be ten times greater than $H$, sufficiently long such that the
 plate behaved as if the far-field stress was applied an infinite distance away
 from the shoulder fillets.
 
 The nominal far-field stress $S$ was applied to the plate using a traction of
-magnitude 100\,\si{\mega\pascal}. The magnitude of this load was not important
-as stress concentrations are normalised by the chosen far-field stress.
+magnitude 100~\MPa. The magnitude of this load was not important as stress
+concentrations are normalised by the chosen far-field stress.
 
 \section{Discussion}
 \section{Conclusions}
