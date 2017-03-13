@@ -165,18 +165,45 @@
 \section{Method}
 \subsection{Experiment}
 
-\begin{figure}[h] \label{fig:experiment_dims}
+\begin{figure}[h]
     \def\svgwidth{0.48\textwidth}
     \input{img/experiment_dims.pdf_tex}
     \caption{Dimensions of plate used in experiment.}
+    \label{fig:experiment_dims}
 \end{figure}
-\begin{figure}[h] \label{fig:experiment_gauges}
+
+\begin{figure}[h]
     \def\svgwidth{0.48\textwidth}
     \input{img/experiment_gauges.pdf_tex}
     \caption{Positions of strain gauges on plate used in experiment.}
+    \label{fig:experiment_gauges}
 \end{figure}
 
 \subsection{Simulation}
+
+\begin{figure}[h]
+    \def\svgwidth{0.48\textwidth}
+    \input{img/simulation_dims.pdf_tex}
+    \caption{Dimensions of plate used in simulation.}
+    \label{fig:simulation_dims}
+\end{figure}
+
+In practice, the plate detailed in Figure~\ref{fig:simulation_dims} was modelled
+with the feature height $d$ kept constant at 100~\si{\milli\meter}. To
+investigate the effects of varying the ratio $H/d$, the simulations were run
+with $H$ at 110~\si{\milli\meter}, 130~\si{\milli\meter} and 200~\si
+{\milli\meter}. For each $H$ value, $r/d$ was also varied by running the
+simulations with six different feature radiuses in the range
+5~\si{\milli\meter}--10~\si{\milli\meter}.
+
+$L$ was chosen to be ten times greater than $H$, sufficiently long such that the
+plate behaved as if the far-field stress was applied an infinite distance away
+from the shoulder fillets.
+
+The nominal far-field stress $S$ was applied to the plate using a traction of
+magnitude 100\,\si{\mega\pascal}. The magnitude of this load was not important
+as stress concentrations are normalised by the chosen far-field stress.
+
 \section{Discussion}
 \section{Conclusions}
 
