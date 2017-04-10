@@ -1,6 +1,6 @@
 %% Creator: Inkscape inkscape 0.91, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file 'experiment_gauges.pdf' (pdf, eps, ps)
+%% Accompanies image file 'rosette.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{746.59297736bp}%
+    \setlength{\unitlength}{693.80942383bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,16 +48,14 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.24557009)%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{experiment_gauges.pdf}}%
-    \put(0.50978263,0.10454894){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\tiny 7}}}%
-    \put(0.54846499,0.05491415){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\tiny 8}}}%
-    \put(0.50978263,0.00449671){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\tiny 9}}}%
-    \put(0.73047024,0.00449671){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\tiny 5}}}%
-    \put(0.77030471,0.13307861){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\tiny 1}}}%
-    \put(0.5882648,0.13307861){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\tiny 6}}}%
-    \put(0.73019477,0.17000468){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\tiny 2}}}%
-    \put(0.69307818,0.12605104){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\tiny 3}}}%
-    \put(0.77030471,0.09060284){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\tiny 4}}}%
+  \begin{picture}(1,0.34933811)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{rosette.pdf}}%
+    \put(0.64527036,0.02355563){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\epsilon_a$}}}%
+    \put(0.56651542,0.22544881){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\epsilon_b$}}}%
+    \put(0.35839779,0.31429607){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\epsilon_c$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{rosette.pdf}}%
+    \put(0.6037409,0.05390114){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\scriptstyle x$}}}%
+    \put(0.39289969,0.26828663){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\scriptstyle y$}}}%
+    \put(0.29422469,0.04360874){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{45\si{\degree}}}}%
   \end{picture}%
 \endgroup%

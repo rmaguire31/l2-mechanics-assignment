@@ -48,12 +48,12 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.4579284)%
+  \begin{picture}(1,0.31271483)%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{simulation_dims.pdf}}%
-    \put(0.87900604,0.23736201){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$S$}}}%
-    \put(0.61099244,0.23736201){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$d$}}}%
-    \put(0.11469355,0.23736201){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$H$}}}%
-    \put(0.57355603,0.4254223){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$r$}}}%
+    \put(0.87900604,0.1648819){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$S$}}}%
+    \put(0.61099244,0.1648819){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$d$}}}%
+    \put(0.11469355,0.1648819){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$H$}}}%
+    \put(0.57355603,0.28020873){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$r$}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{simulation_dims.pdf}}%
     \put(0.48975887,0.00628813){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$L$}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{simulation_dims.pdf}}%

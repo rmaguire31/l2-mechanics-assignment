@@ -50,10 +50,11 @@
   \makeatother%
   \begin{picture}(1,0.28483328)%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{experiment_dims.pdf}}%
-    \put(0.60401485,0.22534452){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{25~mm}}}%
+    \put(0.60401485,0.22534452){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{50~mm}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{experiment_dims.pdf}}%
     \put(0.0728184,0.16099888){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{100~mm}}}%
     \put(0.42354532,0.00060565){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{450~mm}}}%
     \put(0.87478493,0.16099888){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$S$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{experiment_dims.pdf}}%
   \end{picture}%
 \endgroup%
