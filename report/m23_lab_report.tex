@@ -5,6 +5,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{mathtools}
+\usepackage{cancel}
 
 \usepackage{titling}
 \usepackage{nomencl}
@@ -78,9 +79,9 @@
 \renewcommand{\footrulewidth}{0pt}
 
 % Macros.
-\newcommand{\CSA}{{\sc CSA}\xspace}
-\newcommand{\FEA}{{\sc FEA}\xspace}
-\newcommand{\SE}{{\sc SE}\xspace}
+\newcommand{\CSA}{\textsc{CSA}\xspace}
+\newcommand{\BEM}{\textsc{BEM}\xspace}
+\newcommand{\SE}{\textsc{SE}\xspace}
 
 \newcommand{\GPa}{\si{\giga\pascal}\xspace}
 \newcommand{\MPa}{\si{\mega\pascal}\xspace}
@@ -116,7 +117,7 @@
 
 % Acronyms
 \nomenclature[A0]{\CSA}{Computational stress analysis}
-\nomenclature[A1]{\FEA}{Finite element analysis}
+\nomenclature[A1]{\BEM}{Boundary element method}
 \nomenclature[A2]{\SE}{Standard error}
 \nomenclature[AA]{~}{\vspace*{-\baselineskip}}
 
@@ -141,8 +142,8 @@
     \hspace*{\fill}\mm}
 \nomenclature[B09]{$r$}{Radius of plate feature
     \hspace*{\fill}\mm}
-\nomenclature[B10]{$\gamma_{uv}$}{Shear strain in $uv$-plane
-    \hspace*{\fill}---}
+% \nomenclature[B10]{$\gamma_{uv}$}{Shear strain in $uv$-plane
+%     \hspace*{\fill}---}
 \nomenclature[B11]{$\epsilon_{nom}$}{Nominal strain
     \hspace*{\fill}---}
 \nomenclature[B12]{$\epsilon_{ww}$}{Normal strain in $w$-direction
@@ -155,7 +156,7 @@
     \hspace*{\fill}\MPa}
 \nomenclature[B16]{$\sigma_{ww}$}{Normal stress in $w$-direction
     \hspace*{\fill}\MPa}
-\nomenclature[B17]{$\sigma_{uv}$}{Shear stress in $uv$-plane
+% \nomenclature[B17]{$\sigma_{uv}$}{Shear stress in $uv$-plane
 %     \hspace*{\fill}\MPa}
 \nomenclature[BB]{}{\vspace{-\baselineskip}}
 
@@ -192,59 +193,14 @@ sharp internal corners.
 
 \section{Background}
 
-\subsection{Stress Measurements}
-
 Plane stress problems are defined by their zero out of plane stress. The most 
 common plane stress situations involve stresses resolved on the surface of 
-plates. Lautrup~\cite[p.~129]{lautrup2004physics} gives a set of equations for
-Hooke's law in plane stress for an isotropic material which can be represented
-in matrix form as follows:
-\begin{equation} \label{eq:hooke-plane-stress}
-    \begin{pmatrix*}[l]
-        \sigma_{xx} \\
-        \sigma_{yy} \\
-        \sigma_{xy}
-    \end{pmatrix*}
-    = \frac{E}{1-\nu^2}
-    \begin{pmatrix*}[c]
-        1   & \nu & 0 \\
-        \nu & 1   & 0 \\
-        0   & 0   & \frac{1+\nu}{2}
-    \end{pmatrix*}
-    \begin{pmatrix*}[l]
-        \epsilon_{xx} \\
-        \epsilon_{yy} \\
-        \gamma_{xy}
-    \end{pmatrix*}
-\end{equation}
-
-Equation~\eqref{eq:hooke-plane-stress} can be used to determine the stress at a 
-point on the surface of a the plate using measurements of strain from strain 
-gauges. A strain gauge rosette consists of three gauges positioned as detailed 
-in Figure~\vref{fig:rosette}. Hibbeler~\cite[p.~512]{hibbeler2017mechanics} 
-offers the following transformations to find $\epsilon_{xx}$, $\epsilon_{yy}$ 
-and $\epsilon_{xy}$:
-\begin{align}
-    \label{eq:rosette-xx}
-    \epsilon_{xx} &= \epsilon_a \\
-    \label{eq:rosette-yy}
-    \epsilon_{yy} &= \epsilon_c \\
-    \label{eq:rosette-xy}
-    \gamma_{xy}   &= 2\epsilon_b - (\epsilon_a + \epsilon_b)
-\end{align}
-
-\begin{figure}[h]
-    \centering
-    \def\svgwidth{0.48\textwidth}
-    \input{img/rosette.pdf_tex}
-    \caption{45\si{\degree} strain gauge rosette.}
-    \label{fig:rosette}
-\end{figure}
+plates.
 
 On the plate boundary, the only non-zero stress component is tangential to
 the plate boundary. The relationship between the tangential stress and strain 
 can be described using of Hooke's law under axial load, given by 
-Hibbeler~\cite[p.~88]{hibbeler2017mechanics}:
+\mbox{Hibbeler~\cite[p.~88]{hibbeler2017mechanics}}:
 \begin{equation} \label{eq:hooke-axial}
     \sigma_{xx} = E\epsilon_{xx}
 \end{equation}
@@ -253,7 +209,7 @@ where $x$ is the axial or tangential direction.
 In the axial load case, shear strain is also zero. The Poisson
 effect can be used to determine Poisson's ratio if the axial and
 transverse strains are known. The following expression was also given by
-Hibbler~\cite[p.~106]{hibbeler2017mechanics}:
+\mbox{Hibbler~\cite[p.~106]{hibbeler2017mechanics}}:
 \begin{equation} \label{eq:poisson}
     \nu = -\frac{\epsilon_{xx}}{\epsilon_{yy}} 
         = -\frac{\epsilon_{xx}}{\epsilon_{zz}}
@@ -265,7 +221,7 @@ The stress concentration factor is a dimensionless quantity which describes how
 much greater the maximum principle stress in the feature is than the 
 nominal---or  average---stress in the part. Similarly, there also exists a 
 strain concentration factor, which is a measure of relative deformation.
-According by Pilkey~\cite[p.~4]{pilkey2008peterson}:
+According to \mbox{Pilkey~\cite[p.~4]{pilkey2008peterson}}:
 \begin{align}
     \label{eq:stress-conc}
     K_\sigma &= \frac{\sigma_{max}}{\sigma_{nom}} \\
@@ -276,7 +232,7 @@ According by Pilkey~\cite[p.~4]{pilkey2008peterson}:
 For simple features---or stress raisers---such as the 
 circular hole in Figure~\vref{fig:hole-contour}, the \emph{theoretical} stress
 concentration factor $K_{\sigma_t}$ can be determined analytically as described
-by Pilkey~\cite[p.~181]{pilkey2008peterson}:
+by \mbox{Pilkey~\cite[pp.~180--181]{pilkey2008peterson}}:
 \begin{equation} \label{eq:inf-hole-conc}
     K_{\sigma_t} = 3
 \end{equation}
@@ -285,7 +241,7 @@ by Pilkey~\cite[p.~181]{pilkey2008peterson}:
     \centering
     \def\svgwidth{0.48\textwidth}
     \input{img/hole_conc.pdf_tex}
-    \caption{Local stress concentration around hole.}
+    \caption{Circular hole stress concentrations.}
     \label{fig:hole-contour}
 \end{figure}
 
@@ -296,11 +252,11 @@ at the top and bottom of the hole.
 
 However, when the plate has a finite width as illustrated in 
 Figure~\vref{fig:hole-dims}, the problem becomes much harder to solve
-analytically. Pilkey~\cite[p.~183]{pilkey2008peterson} offered a more
-generalised stress concentration factor expression, obtained by fitting
-empirical data:
+analytically. Howland~\cite{howland1930stresses} derived a more generalised 
+stress concentration factor expression at the top and bottom of the hole, but
+not for the local stress concentrations throughout the rest of the plate:
 \begin{equation} \label{eq:hole-conc}
-    K_{\sigma_t} = 2 + \left(1 - \frac{d}{H}\right)^3
+    K_{\sigma_t} = \frac{2 + (1 - d/H)^3}{1 - d/H}
 \end{equation}
 
 \begin{figure}[h]
@@ -311,15 +267,14 @@ empirical data:
     \label{fig:hole-dims}
 \end{figure}
 
-In the limit as $H\rightarrow\infty$,
+Notice, in the limit as $H\rightarrow\infty$,
 $\eqref{eq:hole-conc}\rightarrow\eqref{eq:inf-hole-conc}$.
 
-For the shoulder fillets detailed in Figure~\vref{fig:shoulder-dims}, Kumagai et
-al.~\cite{kumagai1968stress} suggested an expression for stress concentration 
-factor derived empirically:
-\begin{equation} \label{eq:shoulder-conc}
-    K_{\sigma_t} = \left(\frac{H/d-1}{2(2.8H/d-2)}\frac{d}{r}\right)^{0.65}
-\end{equation}
+For the shoulder fillets detailed in Figure~\vref{fig:shoulder-dims}, stress
+concentration factors are derived empirically rather than analytically.
+\mbox{Pilkey~\cite[p.~151]{pilkey2008peterson}} provides a chart relating the
+ratios $H/d$ and $r/d$ to the stress concentration factor using data from
+multiple sources.
 
 \begin{figure}[h]
     \centering
@@ -329,12 +284,13 @@ factor derived empirically:
     \label{fig:shoulder-dims}
 \end{figure}
 
-However, to determine the location of the most stressed points, engineers can
-either measure or simulate the stress concentration factors throughout the
-plate. \FEA is modern computational method which divides the complex part into
-simpler elements using a mesh, resolving the stresses in each element. Prior to
-the development of \FEA, photoelasticity was the most common approach, chosen by
-Kumagai et al.~\cite {kumagai1968stress} for example.
+Therefore, to determine the location of the most stressed points, engineers must
+either measure or simulate the stress concentration factors in the plate,
+particularly for complex stress raisers.
+
+\BEM is modern computational method which divides the complex part into simpler 
+elements using a mesh, resolving the stresses in each element to model the 
+stress field.
 
 \section{Method}
 
@@ -349,7 +305,7 @@ details the dimensions of the plate used in the experiment.
     \centering
     \def\svgwidth{0.48\textwidth}
     \input{img/experiment_dims.pdf_tex}
-    \caption{Dimensions of plate with circular hole.}
+    \caption{Dimensions of the experiment plate.}
     \label{fig:experiment-dims}
 \end{figure}
 
@@ -362,26 +318,28 @@ locations labelled in Figure~\vref{fig:experiment-gauges} were connected to a
     \centering
     \def\svgwidth{0.48\textwidth}
     \input{img/experiment_gauges.pdf_tex}
-    \caption{Positions of strain gauges on plate.}
+    \caption{Positions of strain gauges on the experiment plate.}
     \label{fig:experiment-gauges}
 \end{figure}
 
 Because gauge 2 was located in the centre of the plate away from the
-stress raiser, the strain measured at gauge 2 was taken as the nominal strain
-and the independent variable. The dependent variables were the strains at gauges 1 and 3--9.
+stress raiser, the strain measured at gauge 2 was taken as the nominal strain.
+The independent variable was the maximum strain measured across all the strain
+gauges, expected to be the strain measured at gauge 7 at the bottom of the
+hole. The strains measured at the other gauges were the dependent variables.
 
 Three repeat readings were taken for five different nominal strains: 0, 
 \num{200e-6}, \num{400e-6}, \num{600e-6} and \num{800e-6}. This avoided
 exceeding the \num{1000e-6} limit for the apparatus, and gave sufficient repeat
 readings to determine errors.
 
-Concept Analyst\textsuperscript{\textregistered} \FEA software was used to
+Concept Analyst\textsuperscript{\textregistered} \BEM software was used to
 simulate the local stress concentrations in the plate to supplement the
 experimental results.
 
 \subsection{Shoulder Fillet Stress Raiser}
 
-Concept Analyst \FEA software was also used to investigate how changing the
+Concept Analyst \BEM software was also used to investigate how changing the
 geometry of a shoulder fillet stress raiser affected the stress concentration
 factor. Figure~\vref{fig:simulation-dims} details the the defining dimensions of
 the feature.
@@ -400,37 +358,38 @@ of varying the ratio $H/d$, the simulations were run with $H$ at 110~\mm,
 130~\mm and 200~\mm. For each $H$ value, $r/d$ was also varied by running the
 simulations with six different feature radii in the range 5~\mm--10~\mm.
 
-$L$ was chosen to be ten times greater than $H$, sufficiently long such that the
-plate behaved as if the far-field stress was applied an infinite distance away
-from the shoulder fillets. According to Kumagai et al. \cite{kumagai1968stress},
-\eqref{eq:shoulder-conc} applies when $L/H > 5$.
+$L$ was chosen to be ten times greater than $H$, operating under the assumption
+that this was sufficiently long such that the plate behaved as if the far-field stress was applied an infinite distance away from the shoulder fillets.
 
 The nominal far-field stress $S$ was applied to the plate using a traction of
-magnitude 100~\MPa. The exact magnitude of this load was not important as stress
-concentration factors were later normalised by the chosen far-field stress to
-find the stress concentration factors.
+magnitude 100~\MPa. The exact magnitude of this load was not important as
+the stresses were later normalised by the chosen far-field stress to find the 
+stress concentration factors.
+
+\section{Results}
+
+Figure~\vref{fig:experiment-results} details the strains measured at each gauge,
+plotted against the nominal strain at gauge 2, $\epsilon_2$ or $\epsilon_{nom}$.
+
+\begin{figure}[h]
+    \centering
+    \def\svgwidth{0.48\textwidth}
+    \input{img/experiment_results.pdf_tex}
+    \begin{footnotesize}
+        Error bars: $\pm3\;\text{\SE}$.
+    \end{footnotesize}
+    \caption{Strains measured in the plate, plotted against nominal strain.}
+    \label{fig:experiment-results}
+\end{figure}
 
 \section{Discussion}
 
 \subsection{Circular Hole Stress Raiser}
 
-Figure~\vref{fig:experiment-results}
-
-
-\begin{figure*}[t]
-    \centering
-    \begin{footnotesize}
-        Error bars: $\pm 1.96$ \textsc{SE}.
-    \end{footnotesize}
-    \caption{Strains plotted against the nominal strain.}
-    \label{fig:experiment-results}
-\end{figure*}
-
 \begin{table*}[t]
     \centering
-    \caption{Strain concentration measured in plate with circular hole at
-        different strains.}
-    \label{tab:strain-conc}
+    \caption{Local strain concentration factors measured in the experiment at
+        each strain.} \label{tab:strain-conc}
     \begin{threeparttable}
         \begin{tabular}{
             @{}
@@ -447,71 +406,98 @@ Figure~\vref{fig:experiment-results}
         }
             \toprule
             {$\epsilon_{max},\;\scriptstyle10^{-6}$} &
-            {$K_{\epsilon_1}$} &
-            {$K_{\epsilon_2}$} &
-            {$K_{\epsilon_3}$} &
-            {$K_{\epsilon_4}$} &
-            {$K_{\epsilon_5}$} \\
+            {\phantom{$-$}$K_{\epsilon_1}$} &
+            {\phantom{$-$}$K_{\epsilon_2}$} &
+            {\phantom{$-$}$K_{\epsilon_3}$} &
+            {\phantom{$-$}$K_{\epsilon_4}$} &
+            {\phantom{$-$}$K_{\epsilon_5}$} \\
             \cmidrule(r){1-1}\cmidrule{2-6}
-            1.3\pm3.2 &
-            {\phantom{.00}$-10\pm490$\phantom{.0}} &
+            1.3\pm1.7 &
+            {\phantom{.00}$-10\pm250$\phantom{.0}} &
             {\phantom{$-$.000}$1\pm0$\phantom{.000}} &
-            {\phantom{$-$.000}$0\pm130$\phantom{.0}} &
-            {\phantom{$-$.00}$10\pm490$\phantom{.0}} &
-            {\phantom{$-$.000}$0\pm1000$\phantom{.}} \\
-            198.8\pm5.9 & -0.293\pm0.059 & {\phantom{$-$.000}$1\pm0$\phantom{.000}} & 0.348\pm0.020 & 1.059\pm0.069 & 1.120\pm0.060 \\
-            401.8\pm3.5 & -0.310\pm0.016 & {\phantom{$-$.000}$1\pm0$\phantom{.000}} & 0.365\pm0.032 & 1.102\pm0.066 & 1.073\pm0.079 \\
-            598.5\pm1.8 & -0.320\pm0.007 & {\phantom{$-$.000}$1\pm0$\phantom{.000}} & 0.352\pm0.018 & 1.050\pm0.029 & 1.051\pm0.028 \\
-            803.0\pm3.5 & -0.303\pm0.004 & {\phantom{$-$.000}$1\pm0$\phantom{.000}} & 0.349\pm0.013 & 1.037\pm0.022 & 1.015\pm0.020 \\
+            {\phantom{.000}$-3\pm68$\phantom{.00}} &
+            {\phantom{$-$.00}$10\pm250$\phantom{.0}} &
+            {\phantom{.00}$-30\pm530$\phantom{.0}} \\
+            198.8\pm3.0 & -0.293\pm0.030 & {\phantom{$-$.000}$1\pm0$\phantom{.000}} & 0.348\pm0.010 & 1.059\pm0.035 & 1.120\pm0.031 \\
+            401.8\pm1.8 & -0.310\pm0.008 & {\phantom{$-$.000}$1\pm0$\phantom{.000}} & 0.365\pm0.016 & 1.102\pm0.033 & 1.073\pm0.040 \\
+            598.5\pm0.9 & -0.320\pm0.004 & {\phantom{$-$.000}$1\pm0$\phantom{.000}} & 0.352\pm0.009 & 1.050\pm0.015 & 1.051\pm0.014 \\
+            803.0\pm1.8 & -0.303\pm0.002 & {\phantom{$-$.000}$1\pm0$\phantom{.000}} & 0.349\pm0.007 & 1.037\pm0.011 & 1.015\pm0.010 \\
             \cmidrule{2-6}
             {\bf Mean\tnote{$\dagger$}}
-                        & -0.307\pm0.003 & {\phantom{$-$.000}$1\pm0$\phantom{.000}} & 0.351\pm0.009 & 1.046\pm0.016 & 1.035\pm0.015 \\
+                        & -0.307\pm0.002 & {\phantom{$-$.000}$1\pm0$\phantom{.000}} & 0.351\pm0.005 & 1.046\pm0.008 & 1.035\pm0.008 \\
             \bottomrule
             {$\epsilon_{max},\;\scriptstyle10^{-6}$} &
-            {$K_{\epsilon_6}$} &
-            {$K_{\epsilon_7}$} &
-            {$K_{\epsilon_8}$} &
-            {$K_{\epsilon_9}$} \\
+            {\phantom{$-$}$K_{\epsilon_6}$} &
+            {\phantom{$-$}$K_{\epsilon_7}$} &
+            {\phantom{$-$}$K_{\epsilon_8}$} &
+            {\phantom{$-$}$K_{\epsilon_9}$} \\
             \cmidrule(r){1-1}\cmidrule{2-5}
-            1.3\pm3.2 & 
-            {\phantom{.00}$-10\pm490$\phantom{.0}} &
-            {\phantom{.00}$-10\pm490$\phantom{.0}} &
-            {\phantom{$-$.000}$0\pm260$\phantom{.0}} & 
-            {\phantom{.00}$-10\pm490$\phantom{.0}} \\
-            198.8\pm5.9 & -1.603\pm0.141 & 4.539\pm0.276 & 1.837\pm0.141 & 0.800\pm0.067 \\
-            401.8\pm3.5 & -1.582\pm0.083 & 4.645\pm0.233 & 1.804\pm0.108 & 0.809\pm0.048 \\
-            598.5\pm1.8 & -1.568\pm0.034 & 4.587\pm0.082 & 1.743\pm0.049 & 0.768\pm0.021 \\
-            803.0\pm3.5 & -1.558\pm0.035 & 4.570\pm0.063 & 1.718\pm0.049 & 0.770\pm0.025 \\
+            1.3\pm1.7 & 
+            {\phantom{.00}$-10\pm250$\phantom{.0}} &
+            {\phantom{.00}$-10\pm250$\phantom{.0}} &
+            {\phantom{$-$.000}$0\pm133$\phantom{.0}} & 
+            {\phantom{.00}$-10\pm250$\phantom{.0}} \\
+            198.8\pm3.0 & -1.603\pm0.072 & 4.539\pm0.141 & 1.837\pm0.072 & 0.800\pm0.034 \\
+            401.8\pm1.8 & -1.582\pm0.042 & 4.645\pm0.119 & 1.804\pm0.055 & 0.809\pm0.025 \\
+            598.5\pm0.9 & -1.568\pm0.017 & 4.587\pm0.042 & 1.743\pm0.025 & 0.768\pm0.011 \\
+            803.0\pm1.8 & -1.558\pm0.018 & 4.570\pm0.032 & 1.718\pm0.025 & 0.770\pm0.013 \\
             \cmidrule{2-5}
             {\bf Mean\tnote{$\dagger$}}
-                        & -1.566\pm0.023 & 4.578\pm0.048 & 1.743\pm0.032 & 0.774\pm0.015 \\
+                        & -1.566\pm0.012 & 4.578\pm0.025 & 1.743\pm0.017 & 0.774\pm0.008 \\
             \cmidrule[\heavyrulewidth]{1-5}
         \end{tabular}
         \begin{tablenotes}
             \footnotesize   
-            \item Values: $\text{mean}\pm1.96\;\text{\SE}$, sample size: 3.
+            \item Values: $\text{mean}\,\pm\,\text{\SE}$, sample size: 3.
             \item[$\dagger$] Maximum likelihood weighted average using weight 
                 $\text{\SE}^{-2}$.
         \end{tablenotes}
     \end{threeparttable}
 \end{table*}
 
+Gauges 5, 6, 7 and 9 were located on the plate boundary, so the axial load
+form of Hooke's law applied. Substituting \eqref{eq:hooke-axial} into 
+\eqref{eq:stress-conc} yields the expression for strain concentration factor 
+given in \eqref{eq:strain-conc}:
+\begin{equation} \label{eq:equiv-conc}
+    K_\sigma = \frac{\sigma_{max}}{\sigma_{nom}}
+             = \frac{\cancel{E}\epsilon_{max}}{\cancel{E}\epsilon_{nom}}
+             = K_\epsilon
+\end{equation}
 
-\begin{table}[H]
+From \eqref{eq:equiv-conc}, it can be deduced that the local stress
+concentration factors at the locations of these gauges were the same as the
+local strain concentration factors calculated in Table~\ref{tab:strain-conc}.
+Therefore:
+\begin{align*}
+        K_{\sigma_5} &= \phantom{-}1.035\pm0.008 \\
+        K_{\sigma_6} &=          - 1.566\pm0.012 \\
+        K_{\sigma_7} &= \phantom{-}4.578\pm0.025  \\
+        K_{\sigma_9} &= \phantom{-}0.774\pm0.008
+\end{align*}
+
+Looking at the contour plot from the simulation in 
+Figure~\ref{fig:experiment-simulation} reveals the maximum stress coincided
+with the location of gauge 7. $K_{\sigma_7}$ is an empirical
+measurement of the overall stress concentration factor in the plate.
+
+\begin{figure}[h]
     \centering
-    \begin{tabular}{
-        c
-        S[separate-uncertainty=true,
-          table-format=+1.3,
-          table-figures-uncertainty=1]
-    }
-        $K_{\sigma_5}=$ &  1.035\pm0.015 \\
-        $K_{\sigma_6}=$ & -1.566\pm0.023\\
-        $K_{\sigma_7}=$ &  4.578\pm0.048  \\
-        $K_{\sigma_9}=$ &  0.774\pm0.015 \\
-    \end{tabular}
-\end{table}
+    \caption{Contour}
+    \label{fig:experiment-simulation}
+\end{figure}
 
+The maximum stress recorded in Figure~\ref{fig:experiment-simulation} was
+4.306~\MPa and the far-field stress applied was 100~\MPa. Applying 
+\eqref{eq:stress-conc} yields a prediction of the stress concentration factor.
+Another prediction was obtained by plugging the dimensions of the plate in
+Figure~\ref{fig:experiment-dims} into \eqref{eq:hole-conc}. These are compared
+to the empirical value obtained:
+\begin{align*}
+    \text{Analytical prediction} && K_{\sigma_t} &= 4.250 \\
+    \text{Simulation prediction} && K_{\sigma_t} &= 4.306 \\
+           \text{Value obtained} && K_{\sigma_7} &= 4.578\pm0.012
+\end{align*}
 
 \subsection{Shoulder Fillet Stress Raiser}
 
