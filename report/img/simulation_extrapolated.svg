@@ -22,7 +22,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -40,7 +40,7 @@
      id="namedview312"
      showgrid="false"
      inkscape:zoom="1.3221289"
-     inkscape:cx="3.794338"
+     inkscape:cx="-130.45884"
      inkscape:cy="147.60827"
      inkscape:window-x="0"
      inkscape:window-y="0"
@@ -207,7 +207,7 @@
        xml:space="preserve"
        x="0"
        sodipodi:linespacing="125%"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:SansSerif;-inkscape-font-specification:'SansSerif, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:SansSerif;-inkscape-font-specification:'SansSerif, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-linejoin:round;stroke-linecap:round"
          id="tspan5016">\footnotesize$H/d=2.0$</tspan></text>
   </g>
   <g
@@ -221,7 +221,7 @@
        xml:space="preserve"
        x="0"
        sodipodi:linespacing="125%"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:SansSerif;-inkscape-font-specification:'SansSerif, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:SansSerif;-inkscape-font-specification:'SansSerif, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-linejoin:round;stroke-linecap:round"
          id="tspan5014">\footnotesize$H/d=1.3$</tspan></text>
   </g>
   <g
@@ -270,210 +270,211 @@
      y="0" />
   <g
      id="g76"
-     style="font-style:normal;font-weight:normal;font-size:13px;font-family:SansSerif;color-interpolation:linearRGB;fill:#262626;fill-opacity:1;stroke:#262626;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:optimizeQuality;image-rendering:optimizeQuality;shape-rendering:auto;text-rendering:geometricPrecision"
+     style="font-style:normal;font-weight:normal;font-size:13px;font-family:SansSerif;color-interpolation:linearRGB;fill:#262626;fill-opacity:1;stroke:#262626;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:optimizeQuality;image-rendering:optimizeQuality;shape-rendering:auto;text-rendering:geometricPrecision"
      transform="translate(48.622873,262.98564)">
     <text
        id="text78"
-       style="stroke:none"
+       style="stroke:none;stroke-linejoin:round;stroke-linecap:round"
        y="13"
        xml:space="preserve"
        x="-4.5">0</text>
   </g>
   <g
      id="g80"
-     style="font-style:normal;font-weight:normal;font-size:13px;font-family:SansSerif;color-interpolation:linearRGB;fill:#262626;fill-opacity:1;stroke:#262626;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:optimizeQuality;image-rendering:optimizeQuality;shape-rendering:auto;text-rendering:geometricPrecision"
+     style="font-style:normal;font-weight:normal;font-size:13px;font-family:SansSerif;color-interpolation:linearRGB;fill:#262626;fill-opacity:1;stroke:#262626;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:optimizeQuality;image-rendering:optimizeQuality;shape-rendering:auto;text-rendering:geometricPrecision"
      transform="translate(98.622873,262.98564)">
     <text
        id="text82"
-       style="stroke:none"
+       style="stroke:none;stroke-linejoin:round;stroke-linecap:round"
        y="13"
        xml:space="preserve"
        x="-10.5">0.1</text>
   </g>
   <g
      id="g84"
-     style="font-style:normal;font-weight:normal;font-size:13px;font-family:SansSerif;color-interpolation:linearRGB;fill:#262626;fill-opacity:1;stroke:#262626;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:optimizeQuality;image-rendering:optimizeQuality;shape-rendering:auto;text-rendering:geometricPrecision"
+     style="font-style:normal;font-weight:normal;font-size:13px;font-family:SansSerif;color-interpolation:linearRGB;fill:#262626;fill-opacity:1;stroke:#262626;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:optimizeQuality;image-rendering:optimizeQuality;shape-rendering:auto;text-rendering:geometricPrecision"
      transform="translate(148.62287,262.98564)">
     <text
        id="text86"
-       style="stroke:none"
+       style="stroke:none;stroke-linejoin:round;stroke-linecap:round"
        y="13"
        xml:space="preserve"
        x="-10.5">0.2</text>
   </g>
   <g
      id="g88"
-     style="font-style:normal;font-weight:normal;font-size:13px;font-family:SansSerif;color-interpolation:linearRGB;fill:#262626;fill-opacity:1;stroke:#262626;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:optimizeQuality;image-rendering:optimizeQuality;shape-rendering:auto;text-rendering:geometricPrecision"
+     style="font-style:normal;font-weight:normal;font-size:13px;font-family:SansSerif;color-interpolation:linearRGB;fill:#262626;fill-opacity:1;stroke:#262626;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:optimizeQuality;image-rendering:optimizeQuality;shape-rendering:auto;text-rendering:geometricPrecision"
      transform="translate(198.62287,262.98564)">
     <text
        id="text90"
-       style="stroke:none"
+       style="stroke:none;stroke-linejoin:round;stroke-linecap:round"
        y="13"
        xml:space="preserve"
        x="-10.5">0.3</text>
   </g>
   <g
      id="g92"
-     style="font-style:normal;font-weight:normal;font-size:13px;font-family:SansSerif;color-interpolation:linearRGB;fill:#262626;fill-opacity:1;stroke:#262626;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:optimizeQuality;image-rendering:optimizeQuality;shape-rendering:auto;text-rendering:geometricPrecision"
+     style="font-style:normal;font-weight:normal;font-size:13px;font-family:SansSerif;color-interpolation:linearRGB;fill:#262626;fill-opacity:1;stroke:#262626;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:optimizeQuality;image-rendering:optimizeQuality;shape-rendering:auto;text-rendering:geometricPrecision"
      transform="translate(248.62287,262.98564)">
     <text
        id="text94"
-       style="stroke:none"
+       style="stroke:none;stroke-linejoin:round;stroke-linecap:round"
        y="13"
        xml:space="preserve"
        x="-10.5">0.4</text>
   </g>
   <g
      id="g96"
-     style="font-style:normal;font-weight:normal;font-size:13px;font-family:SansSerif;color-interpolation:linearRGB;fill:#262626;fill-opacity:1;stroke:#262626;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:optimizeQuality;image-rendering:optimizeQuality;shape-rendering:auto;text-rendering:geometricPrecision"
+     style="font-style:normal;font-weight:normal;font-size:13px;font-family:SansSerif;color-interpolation:linearRGB;fill:#262626;fill-opacity:1;stroke:#262626;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:optimizeQuality;image-rendering:optimizeQuality;shape-rendering:auto;text-rendering:geometricPrecision"
      transform="translate(298.62287,262.98564)">
     <text
        id="text98"
-       style="stroke:none"
+       style="stroke:none;stroke-linejoin:round;stroke-linecap:round"
        y="13"
        xml:space="preserve"
        x="-10.5">0.5</text>
   </g>
   <g
      id="g124"
-     style="font-style:normal;font-weight:normal;font-size:13px;font-family:SansSerif;color-interpolation:linearRGB;fill:#262626;fill-opacity:1;stroke:#262626;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:optimizeQuality;image-rendering:optimizeQuality;shape-rendering:auto;text-rendering:geometricPrecision"
+     style="font-style:normal;font-weight:normal;font-size:13px;font-family:SansSerif;color-interpolation:linearRGB;fill:#262626;fill-opacity:1;stroke:#262626;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:optimizeQuality;image-rendering:optimizeQuality;shape-rendering:auto;text-rendering:geometricPrecision"
      transform="translate(43.289573,257.65234)">
     <text
        id="text126"
-       style="stroke:none"
+       style="stroke:none;stroke-linejoin:round;stroke-linecap:round"
        y="4.5"
        xml:space="preserve"
        x="-9">1</text>
   </g>
   <g
      id="g128"
-     style="font-style:normal;font-weight:normal;font-size:13px;font-family:SansSerif;color-interpolation:linearRGB;fill:#262626;fill-opacity:1;stroke:#262626;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:optimizeQuality;image-rendering:optimizeQuality;shape-rendering:auto;text-rendering:geometricPrecision"
+     style="font-style:normal;font-weight:normal;font-size:13px;font-family:SansSerif;color-interpolation:linearRGB;fill:#262626;fill-opacity:1;stroke:#262626;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:optimizeQuality;image-rendering:optimizeQuality;shape-rendering:auto;text-rendering:geometricPrecision"
      transform="translate(43.289573,221.93804)">
     <text
        id="text130"
-       style="stroke:none"
+       style="stroke:none;stroke-linejoin:round;stroke-linecap:round"
        y="4.5"
        xml:space="preserve"
        x="-9">2</text>
   </g>
   <g
      id="g132"
-     style="font-style:normal;font-weight:normal;font-size:13px;font-family:SansSerif;color-interpolation:linearRGB;fill:#262626;fill-opacity:1;stroke:#262626;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:optimizeQuality;image-rendering:optimizeQuality;shape-rendering:auto;text-rendering:geometricPrecision"
+     style="font-style:normal;font-weight:normal;font-size:13px;font-family:SansSerif;color-interpolation:linearRGB;fill:#262626;fill-opacity:1;stroke:#262626;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:optimizeQuality;image-rendering:optimizeQuality;shape-rendering:auto;text-rendering:geometricPrecision"
      transform="translate(43.289573,186.22374)">
     <text
        id="text134"
-       style="stroke:none"
+       style="stroke:none;stroke-linejoin:round;stroke-linecap:round"
        y="4.5"
        xml:space="preserve"
        x="-9">3</text>
   </g>
   <g
      id="g136"
-     style="font-style:normal;font-weight:normal;font-size:13px;font-family:SansSerif;color-interpolation:linearRGB;fill:#262626;fill-opacity:1;stroke:#262626;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:optimizeQuality;image-rendering:optimizeQuality;shape-rendering:auto;text-rendering:geometricPrecision"
+     style="font-style:normal;font-weight:normal;font-size:13px;font-family:SansSerif;color-interpolation:linearRGB;fill:#262626;fill-opacity:1;stroke:#262626;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:optimizeQuality;image-rendering:optimizeQuality;shape-rendering:auto;text-rendering:geometricPrecision"
      transform="translate(43.289573,150.50944)">
     <text
        id="text138"
-       style="stroke:none"
+       style="stroke:none;stroke-linejoin:round;stroke-linecap:round"
        y="4.5"
        xml:space="preserve"
        x="-9">4</text>
   </g>
   <g
      id="g140"
-     style="font-style:normal;font-weight:normal;font-size:13px;font-family:SansSerif;color-interpolation:linearRGB;fill:#262626;fill-opacity:1;stroke:#262626;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:optimizeQuality;image-rendering:optimizeQuality;shape-rendering:auto;text-rendering:geometricPrecision"
+     style="font-style:normal;font-weight:normal;font-size:13px;font-family:SansSerif;color-interpolation:linearRGB;fill:#262626;fill-opacity:1;stroke:#262626;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:optimizeQuality;image-rendering:optimizeQuality;shape-rendering:auto;text-rendering:geometricPrecision"
      transform="translate(43.289573,114.79524)">
     <text
        id="text142"
-       style="stroke:none"
+       style="stroke:none;stroke-linejoin:round;stroke-linecap:round"
        y="4.5"
        xml:space="preserve"
        x="-9">5</text>
   </g>
   <g
      id="g144"
-     style="font-style:normal;font-weight:normal;font-size:13px;font-family:SansSerif;color-interpolation:linearRGB;fill:#262626;fill-opacity:1;stroke:#262626;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:optimizeQuality;image-rendering:optimizeQuality;shape-rendering:auto;text-rendering:geometricPrecision"
+     style="font-style:normal;font-weight:normal;font-size:13px;font-family:SansSerif;color-interpolation:linearRGB;fill:#262626;fill-opacity:1;stroke:#262626;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:optimizeQuality;image-rendering:optimizeQuality;shape-rendering:auto;text-rendering:geometricPrecision"
      transform="translate(43.289573,79.08094)">
     <text
        id="text146"
-       style="stroke:none"
+       style="stroke:none;stroke-linejoin:round;stroke-linecap:round"
        y="4.5"
        xml:space="preserve"
        x="-9">6</text>
   </g>
   <g
      id="g148"
-     style="font-style:normal;font-weight:normal;font-size:13px;font-family:SansSerif;color-interpolation:linearRGB;fill:#262626;fill-opacity:1;stroke:#262626;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:optimizeQuality;image-rendering:optimizeQuality;shape-rendering:auto;text-rendering:geometricPrecision"
+     style="font-style:normal;font-weight:normal;font-size:13px;font-family:SansSerif;color-interpolation:linearRGB;fill:#262626;fill-opacity:1;stroke:#262626;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:optimizeQuality;image-rendering:optimizeQuality;shape-rendering:auto;text-rendering:geometricPrecision"
      transform="translate(43.289573,43.36664)">
     <text
        id="text150"
-       style="stroke:none"
+       style="stroke:none;stroke-linejoin:round;stroke-linecap:round"
        y="4.5"
        xml:space="preserve"
        x="-9">7</text>
   </g>
   <g
      id="g152"
-     style="font-style:normal;font-weight:normal;font-size:13px;font-family:SansSerif;color-interpolation:linearRGB;fill:#262626;fill-opacity:1;stroke:#262626;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:optimizeQuality;image-rendering:optimizeQuality;shape-rendering:auto;text-rendering:geometricPrecision"
+     style="font-style:normal;font-weight:normal;font-size:13px;font-family:SansSerif;color-interpolation:linearRGB;fill:#262626;fill-opacity:1;stroke:#262626;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:optimizeQuality;image-rendering:optimizeQuality;shape-rendering:auto;text-rendering:geometricPrecision"
      transform="translate(43.289573,7.65234)">
     <text
        id="text154"
-       style="stroke:none"
+       style="stroke:none;stroke-linejoin:round;stroke-linecap:round"
        y="4.5"
        xml:space="preserve"
        x="-9">8</text>
   </g>
   <g
      id="g5908"
-     transform="translate(-0.32387703,0)">
+     transform="translate(-0.32387703,0)"
+     style="stroke-linejoin:round;stroke-linecap:round">
     <g
        transform="translate(-41.377127,-9.34766)"
-       style="font-style:normal;font-weight:normal;font-size:medium;font-family:Dialog;color-interpolation:linearRGB;fill:#262626;fill-opacity:1;stroke:#262626;stroke-width:0.66670001;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:optimizeQuality;image-rendering:optimizeQuality;shape-rendering:auto;text-rendering:geometricPrecision"
+       style="font-style:normal;font-weight:normal;font-size:medium;font-family:Dialog;color-interpolation:linearRGB;fill:#262626;fill-opacity:1;stroke:#262626;stroke-width:0.66670001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:optimizeQuality;image-rendering:optimizeQuality;shape-rendering:auto;text-rendering:geometricPrecision"
        id="g60">
       <line
          y2="267"
-         style="fill:none"
+         style="fill:none;stroke-linejoin:round;stroke-linecap:round"
          x1="90"
          x2="340"
          y1="267"
          id="line62" />
       <line
          y2="264.5"
-         style="fill:none"
+         style="fill:none;stroke-linejoin:round;stroke-linecap:round"
          x1="90"
          x2="90"
          y1="267"
          id="line64-3" />
       <line
          y2="264.5"
-         style="fill:none"
+         style="fill:none;stroke-linejoin:round;stroke-linecap:round"
          x1="140"
          x2="140"
          y1="267"
          id="line66-6" />
       <line
          y2="264.5"
-         style="fill:none"
+         style="fill:none;stroke-linejoin:round;stroke-linecap:round"
          x1="190"
          x2="190"
          y1="267"
          id="line68-7" />
       <line
          y2="264.5"
-         style="fill:none"
+         style="fill:none;stroke-linejoin:round;stroke-linecap:round"
          x1="240"
          x2="240"
          y1="267"
          id="line70-5" />
       <line
          y2="264.5"
-         style="fill:none"
+         style="fill:none;stroke-linejoin:round;stroke-linecap:round"
          x1="290"
          x2="290"
          y1="267"
          id="line72-3" />
       <line
          y2="264.5"
-         style="fill:none"
+         style="fill:none;stroke-linejoin:round;stroke-linecap:round"
          x1="340"
          x2="340"
          y1="267"
@@ -481,67 +482,67 @@
     </g>
     <g
        transform="translate(-41.377127,-9.34766)"
-       style="font-style:normal;font-weight:normal;font-size:medium;font-family:Dialog;color-interpolation:linearRGB;fill:#262626;fill-opacity:1;stroke:#262626;stroke-width:0.66670001;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:optimizeQuality;image-rendering:optimizeQuality;shape-rendering:auto;text-rendering:geometricPrecision"
+       style="font-style:normal;font-weight:normal;font-size:medium;font-family:Dialog;color-interpolation:linearRGB;fill:#262626;fill-opacity:1;stroke:#262626;stroke-width:0.66670001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:optimizeQuality;image-rendering:optimizeQuality;shape-rendering:auto;text-rendering:geometricPrecision"
        id="g104">
       <line
          y2="17"
-         style="fill:none"
+         style="fill:none;stroke-linejoin:round;stroke-linecap:round"
          x1="90"
          x2="90"
          y1="267"
          id="line106-6" />
       <line
          y2="267"
-         style="fill:none"
+         style="fill:none;stroke-linejoin:round;stroke-linecap:round"
          x1="90"
          x2="92.5"
          y1="267"
          id="line108-2" />
       <line
          y2="231.28571"
-         style="fill:none"
+         style="fill:none;stroke-linejoin:round;stroke-linecap:round"
          x1="90"
          x2="92.5"
          y1="231.28571"
          id="line110-9" />
       <line
          y2="195.5714"
-         style="fill:none"
+         style="fill:none;stroke-linejoin:round;stroke-linecap:round"
          x1="90"
          x2="92.5"
          y1="195.5714"
          id="line112-1" />
       <line
          y2="159.8571"
-         style="fill:none"
+         style="fill:none;stroke-linejoin:round;stroke-linecap:round"
          x1="90"
          x2="92.5"
          y1="159.8571"
          id="line114-2" />
       <line
          y2="124.1429"
-         style="fill:none"
+         style="fill:none;stroke-linejoin:round;stroke-linecap:round"
          x1="90"
          x2="92.5"
          y1="124.1429"
          id="line116-7" />
       <line
          y2="88.428596"
-         style="fill:none"
+         style="fill:none;stroke-linejoin:round;stroke-linecap:round"
          x1="90"
          x2="92.5"
          y1="88.428596"
          id="line118" />
       <line
          y2="52.714298"
-         style="fill:none"
+         style="fill:none;stroke-linejoin:round;stroke-linecap:round"
          x1="90"
          x2="92.5"
          y1="52.714298"
          id="line120" />
       <line
          y2="17"
-         style="fill:none"
+         style="fill:none;stroke-linejoin:round;stroke-linecap:round"
          x1="90"
          x2="92.5"
          y1="17"
@@ -549,101 +550,101 @@
     </g>
     <g
        transform="translate(73.622873,177.97374)"
-       style="font-style:normal;font-weight:normal;font-size:medium;font-family:Dialog;color-interpolation:linearRGB;fill:#be8e1a;fill-opacity:1;stroke:#be8e1a;stroke-width:1.33329999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:optimizeQuality;image-rendering:optimizeQuality;shape-rendering:auto;text-rendering:geometricPrecision"
+       style="font-style:normal;font-weight:normal;font-size:medium;font-family:Dialog;color-interpolation:linearRGB;fill:#be8e1a;fill-opacity:1;stroke:#be8e1a;stroke-width:1.33329999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:optimizeQuality;image-rendering:optimizeQuality;shape-rendering:auto;text-rendering:geometricPrecision"
        id="g160">
       <path
          inkscape:connector-curvature="0"
-         style="fill:none"
+         style="fill:none;stroke-linejoin:round;stroke-linecap:round"
          d="m -2.8284,-2.8284 5.6568,5.6568 m -5.6568,0 5.6568,-5.6568"
          id="path162" />
       <path
          inkscape:connector-curvature="0"
          d="m -2.8284,-2.8284 5.6568,5.6568 m -5.6568,0 5.6568,-5.6568"
-         style="fill:none"
+         style="fill:none;stroke-linejoin:round;stroke-linecap:round"
          transform="translate(5,7.6643)"
          id="path164" />
       <path
          inkscape:connector-curvature="0"
          d="m -2.8284,-2.8284 5.6568,5.6568 m -5.6568,0 5.6568,-5.6568"
-         style="fill:none"
+         style="fill:none;stroke-linejoin:round;stroke-linecap:round"
          transform="translate(10,13.7036)"
          id="path166" />
       <path
          inkscape:connector-curvature="0"
          d="m -2.8284,-2.8284 5.6568,5.6568 m -5.6568,0 5.6568,-5.6568"
-         style="fill:none"
+         style="fill:none;stroke-linejoin:round;stroke-linecap:round"
          transform="translate(15,18.6321)"
          id="path168" />
       <path
          inkscape:connector-curvature="0"
          d="m -2.8284,-2.8284 5.6568,5.6568 m -5.6568,0 5.6568,-5.6568"
-         style="fill:none"
+         style="fill:none;stroke-linejoin:round;stroke-linecap:round"
          transform="translate(20,22.7536)"
          id="path170" />
       <path
          inkscape:connector-curvature="0"
          d="m -2.8284,-2.8284 5.6568,5.6568 m -5.6568,0 5.6568,-5.6568"
-         style="fill:none"
+         style="fill:none;stroke-linejoin:round;stroke-linecap:round"
          transform="translate(25,26.1143)"
          id="path172" />
       <path
          inkscape:connector-curvature="0"
          d="m -2.8284,-2.8284 5.6568,5.6568 m -5.6568,0 5.6568,-5.6568"
-         style="fill:none;stroke:#ad4214"
+         style="fill:none;stroke:#ad4214;stroke-linejoin:round;stroke-linecap:round"
          transform="translate(0,21.2714)"
          id="path174" />
       <path
          inkscape:connector-curvature="0"
          d="m -2.8284,-2.8284 5.6568,5.6568 m -5.6568,0 5.6568,-5.6568"
-         style="fill:none;stroke:#ad4214"
+         style="fill:none;stroke:#ad4214;stroke-linejoin:round;stroke-linecap:round"
          transform="translate(5,26.525)"
          id="path176" />
       <path
          inkscape:connector-curvature="0"
          d="m -2.8284,-2.8284 5.6568,5.6568 m -5.6568,0 5.6568,-5.6568"
-         style="fill:none;stroke:#ad4214"
+         style="fill:none;stroke:#ad4214;stroke-linejoin:round;stroke-linecap:round"
          transform="translate(10,30.6643)"
          id="path178" />
       <path
          inkscape:connector-curvature="0"
          d="m -2.8284,-2.8284 5.6568,5.6568 m -5.6568,0 5.6568,-5.6568"
-         style="fill:none;stroke:#ad4214"
+         style="fill:none;stroke:#ad4214;stroke-linejoin:round;stroke-linecap:round"
          transform="translate(15,34.0393)"
          id="path180" />
       <path
          inkscape:connector-curvature="0"
          d="m -2.8284,-2.8284 5.6568,5.6568 m -5.6568,0 5.6568,-5.6568"
-         style="fill:none;stroke:#ad4214"
+         style="fill:none;stroke:#ad4214;stroke-linejoin:round;stroke-linecap:round"
          transform="translate(20,36.875)"
          id="path182" />
       <path
          inkscape:connector-curvature="0"
          d="m -2.8284,-2.8284 5.6568,5.6568 m -5.6568,0 5.6568,-5.6568"
-         style="fill:none;stroke:#ad4214"
+         style="fill:none;stroke:#ad4214;stroke-linejoin:round;stroke-linecap:round"
          transform="translate(25,39.2893)"
          id="path184" />
       <path
          inkscape:connector-curvature="0"
          d="m -2.8284,-2.8284 5.6568,5.6568 m -5.6568,0 5.6568,-5.6568"
-         style="fill:none;stroke:#005b97"
+         style="fill:none;stroke:#005b97;stroke-linejoin:round;stroke-linecap:round"
          transform="translate(0,41.5714)"
          id="path186" />
       <path
          inkscape:connector-curvature="0"
          transform="translate(-115,-187.3214)"
-         style="fill:none;fill-rule:evenodd;stroke:#edb120;stroke-linejoin:round"
+         style="fill:none;fill-rule:evenodd;stroke:#edb120;stroke-linejoin:round;stroke-linecap:round"
          d="m 92.5253,32.7819 2.5252,61.2189 2.5253,29.1542 2.5252,18.1805 2.5253,12.8244 2.5252,9.7179 2.5253,7.7188 2.5252,6.3385 2.5253,5.3362 2.5252,4.5797 2.5253,3.9914 2.5252,3.5226 2.5253,3.1416 2.5252,2.8266 2.5253,2.5626 2.5252,2.3384 2.5253,2.1462 2.5252,1.9797 2.5253,1.8345 2.5253,1.7066 2.5252,1.5935 2.5253,1.4927 2.5252,1.4024 2.5253,1.3213 2.5252,1.2478 2.5253,1.1813 2.5252,1.1205 2.5253,1.065 2.5252,1.0141 2.5253,0.9673 2.5252,0.9241 2.5253,0.884 2.5252,0.847 2.5253,0.8125 2.5252,0.7804 2.5253,0.7503 2.5252,0.7224 2.5253,0.696 2.5252,0.6714 2.5253,0.6482 2.5253,0.6263 2.5252,0.6058 2.5253,0.5863 2.5252,0.5678 2.5253,0.5505 2.5252,0.5339 2.5253,0.5183 2.5252,0.5033 2.5253,0.4892 2.5252,0.4757 2.5253,0.4628 2.5252,0.4505 2.5253,0.4388 2.5252,0.4276 2.5253,0.4169 2.5252,0.4066 2.5253,0.3968 2.5252,0.3873 2.5253,0.3783 2.5253,0.3696 2.5252,0.3613 2.5253,0.3532 2.5252,0.3455 2.5253,0.3381 2.5252,0.3309 2.5253,0.324 2.5252,0.3173 2.5253,0.3109 2.5252,0.3047 2.5253,0.2987 2.5252,0.2929 2.5253,0.2873 2.5252,0.2818 2.5253,0.2767 2.5253,0.2716 2.5252,0.2666 2.5253,0.2619 2.5252,0.2572 2.5252,0.2528 2.5253,0.2484 2.5252,0.2442 2.5253,0.2401 2.5253,0.2361 2.5252,0.2322 2.5253,0.2285 2.5252,0.2249 2.5253,0.2212 2.5252,0.2178 2.5253,0.2145 2.5252,0.2112 2.5253,0.2079 2.5252,0.2049 2.5253,0.2018 2.5252,0.1989 2.5253,0.196 2.5253,0.1932 2.5252,0.1905 2.5252,0.1877 2.5253,0.1852"
          id="path188" />
       <path
          inkscape:connector-curvature="0"
          transform="translate(-115,-187.3214)"
-         style="fill:none;fill-rule:evenodd;stroke:#d95319;stroke-linejoin:round"
+         style="fill:none;fill-rule:evenodd;stroke:#d95319;stroke-linejoin:round;stroke-linecap:round"
          d="m 92.5862,114.2373 2.5862,36.0786 2.5862,17.8121 2.5862,11.3604 2.5862,8.1472 2.5862,6.2552 2.5862,5.0227 2.5863,4.1631 2.5862,3.5332 2.5862,3.0544 2.5862,2.6792 2.5862,2.3786 2.5862,2.1328 2.5862,1.9285 2.5862,1.7564 2.5862,1.6097 2.5862,1.4834 2.5862,1.3736 2.5862,1.2773 2.5862,1.1923 2.5862,1.1169 2.5862,1.0495 2.5863,0.989 2.5862,0.9343 2.5862,0.8848 2.5862,0.8397 2.5862,0.7985 2.5862,0.7608 2.5862,0.7261"
          id="path190" />
       <path
          inkscape:connector-curvature="0"
          transform="translate(-115,-187.3214)"
-         style="fill:none;fill-rule:evenodd;stroke:#0072bd;stroke-linejoin:round"
+         style="fill:none;fill-rule:evenodd;stroke:#0072bd;stroke-linejoin:round;stroke-linecap:round"
          d="m 92.7778,176.9754 2.7778,19.4454 2.7777,9.9492 2.7778,6.489 2.7778,4.7308 2.7778,3.6797 2.7777,2.9869 2.7778,2.4986 2.7778,2.1379"
          id="path192" />
     </g>
