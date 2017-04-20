@@ -22,6 +22,7 @@
 
 \usepackage{booktabs}
 \usepackage{threeparttable}
+\usepackage{multirow}
 \usepackage{calc}
 \usepackage{fancyhdr}
 
@@ -339,9 +340,11 @@ locations labelled in Figure~\vref{fig:experiment-gauges} were connected to a
     \label{fig:experiment-gauges}
 \end{figure}
 
-Gauge 2 was located away from the stress raiser, so the strain measured at 
-gauge 2 would be close to the far-field strain. Therefore, it was taken as the
-nominal strain. The independent variable was the maximum strain measured across all the strain gauges, expected to be the strain measured at gauge 7 at the  bottom of the hole. The strains measured at the other gauges were the dependent variables.
+Gauge 2 was located away from the stress raiser, so the strain measured at gauge
+2 would be close to the far-field strain. Therefore, it was taken as the nominal
+strain. The independent variable was the maximum strain measured across all the
+strain gauges, expected to be the strain measured at gauge 7 at the bottom of
+the hole. The strains measured at the other gauges were the dependent variables.
 
 Three repeat readings were taken for five different nominal strains: 0, 
 \num{200e-6}, \num{400e-6}, \num{600e-6} and \num{800e-6}. This avoided
@@ -385,8 +388,8 @@ the stresses were later normalised by the chosen far-field stress to find the
 stress concentration factors.
 
 To investigate how the stress concentration factor changes in a plate with a
-finite length, $L/H$ was then reduced from 10 to 1, corresponding to ten 
-lengths in the range 2000~\mm--200~\mm. $H$ was kept constant at 200~\mm, $d$ 
+finite length, $L/H$ was then reduced from 5 to 0.5, corresponding to ten 
+lengths in the range 1000~\mm--50~\mm. $H$ was kept constant at 200~\mm, $d$ 
 at 100~\mm and $r$ at 10~\mm.
 
 \section{Results}
@@ -456,18 +459,22 @@ fillet geometry are displayed in Figure~\vref{fig:simulation-results-contour}.
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{img/Hd1-3_rd0-05.pdf}
         \caption{$H/d = 1.3,r/d = 0.05$}
+        \label{fig:H/d=1.3-r/d=0.05}
     \end{subfigure}
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{img/Hd2-0_rd0-05.pdf}
         \caption{$H/d = 2.0,r/d = 0.05$}
+        \label{fig:H/d=2.0-r/d=0.05}
     \end{subfigure}
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{img/Hd1-3_rd0-10.pdf}
         \caption{$H/d = 1.3,r/d = 0.10$}
+        \label{fig:H/d=1.3-r/d=0.10}
     \end{subfigure}
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{img/Hd2-0_rd0-10.pdf}
         \caption{$H/d = 2.0,r/d = 0.10$}
+        \label{fig:H/d=2.0-r/d=0.10}
     \end{subfigure}
     \caption{Stress concentrations simulated for shoulder fillets with
         different $H/d$ and $r/d$.}
@@ -500,12 +507,11 @@ Figure~\ref{fig:simulation-results-length} records the stress concentration
 factor of shoulder fillets as the length of the plate was reduced from
 effectively infinite to finite values.
 
-
 \begin{figure}[H]
     \small
     \centering
     \def\svgwidth{\linewidth}
-    \input{img/simulation_results.pdf_tex}
+    \input{img/simulation_length.pdf_tex}
     \caption{Stress concentration factors of shoulder fillets with different
         $L/H$.}
     \label{fig:simulation-results-length}
@@ -789,13 +795,70 @@ Section~\ref{sec:stress-conc} and referenced again
 \mbox{here~\cite[p.~151]{pilkey2008peterson}}.
 
 These charts are only valid when the plate is sufficiently long with respect to
-it's width.
+it's width. The plate in Figure~\vref{fig:H/d=2.0-r/d=0.10} was modelled with
+$H/d$ at 2.0, $r/d$ at 0.10, $L/d$ at 10 and yielded a stress concentration
+factor of 2.4998.
 
-\textcolor{red}{\bf\LARGE...}
+Figure~\ref{fig:simulation-results-length} indicates the stress concentration
+factor remained largely constant when \mbox{$L/H > 3$}, accounting for numerical
+noise. When \mbox{$L/H > 3$}, the mean for $K_{\sigma_t}$ was 2.4994 with a
+one-tailed 95\% lower confidence limit of 2.4992, derived using the standard
+error for $K_{\sigma_t}$ including data when $L/H$ was 6, 7, 8, 9 and 10.
+Table~\vref{tab:simulation-results-length} lists the confidence limits for all
+values tested and confirms 3 was the largest $L/H$ ratio for which the
+reduction in stress concentration was significant at the 5\% level.
 
-\textcolor{red}{\bf\LARGE...}
+\begin{table}[h]
+    \small
+    \centering
+    \caption{95\% confidence limits for mean $K_{\sigma_t}$ in shoulder fillets
+        calculated from data when \mbox{$L/H > x$}, compared with $K_{\sigma_t}$
+        measured when \mbox{$L/H = x$}.}
+    \label{tab:simulation-results-length}
+    \begin{threeparttable}
+        \begin{tabular}{
+            S[table-format=1.1]
+            S[table-format=1.5]
+            S[table-format=1.5]
+            S[table-format=-1.2e-1]
+        }
+            \toprule
+            \multicolumn{1}{c}{\multirow{2}{*}{\shortstack[c]{\\$L/H$}}} &
+            \multicolumn{2}{c}{$K_{\sigma_t}$} &
+            \multicolumn{1}{c}{\multirow{2}{*}{\shortstack[c]{
+                $\text{Limit}$ \\$\text{}-\text{Actual}$
+            }}} \\
+            \cmidrule(lr){2-3}
+            & {Limit\tnote{$\dagger$}} & {Actual} & \\
+            \midrule
+            0.5 & 2.47901 & 2.19150 &  2.88e-1 \\
+            1.0 & 2.49247 & 2.41160 &  8.09e-2 \\
+            1.5 & 2.49714 & 2.47130 &  2.58e-2 \\
+            2.0 & 2.49881 & 2.49060 &  8.21e-3 \\
+            2.5 & 2.49925 & 2.49720 &  2.05e-3 \\
+            3.0 & 2.49925 & 2.49920 &  5.48e-5 \\
+            \cmidrule(lr){1-4}
+            3.5 & 2.49921 & 2.49960 & -3.86e-4 \\
+            4.0 & 2.49916 & 2.49960 & -4.37e-4 \\
+            4.5 & 2.49911 & 2.49940 & -2.87e-4 \\
+            5.0 & 2.49903 & 2.49940 & -3.66e-4 \\
+            6.0 & 2.49891 & 2.49930 & -3.85e-4 \\
+            7.0 & 2.49861 & 2.49930 & -6.94e-4 \\
+            8.0 & 2.49651 & 2.49940 & -2.89e-3 \\
+            \bottomrule
+        \end{tabular}
+        \begin{tablenotes}
+            \footnotesize
+            \item[$\dagger$] $\text{mean}-\text{95\%
+            confidence}$
+        \end{tablenotes}
+    \end{threeparttable}
+\end{table}
 
-\textcolor{red}{\bf\LARGE...}
+Consequently, the models in Figure~\vref{fig:simulation-extrapolated} are not a
+good fit when $L/H \leq 3$. Similar length constraints will apply for different
+$H/d$ and $r/d$ ratios to the respective 2.0 and 0.10 values chosen for this
+analysis.
 
 \section{Conclusions}
 
@@ -821,8 +884,8 @@ for the same fillet radii. Engineers can use charts and tables to specify the
 required fillet radii for a particular part to meet loading requirements.
 
 The models used and relationships derived in this report apply to plates of a
-sufficient length. When the ratio of the length over the width of plate exceeds 
-\textcolor{red}{\bf\LARGE...}, alternative models must be devised.
+sufficient length. When the ratio of the length over the width of plate is 3 or
+less, alternative models must be devised.
 
 % References.
 \printbibliography

@@ -1,0 +1,72 @@
+%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'simulation_length.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{277.27839385bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.85841129)%
+    \put(0.46970543,0.00636065){\makebox(0,0)[lb]{\smash{$L/H$}}}%
+    \put(0.03288099,0.43240698){\rotatebox{90}{\makebox(0,0)[lb]{\smash{$K_{\sigma_t}$}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{simulation_length.pdf}}%
+    \put(0.12579734,0.06214113){\makebox(0,0)[lb]{\smash{0}}}%
+    \put(0.27005669,0.06214113){\makebox(0,0)[lb]{\smash{1}}}%
+    \put(0.41431604,0.06214113){\makebox(0,0)[lb]{\smash{2}}}%
+    \put(0.55857538,0.06214113){\makebox(0,0)[lb]{\smash{3}}}%
+    \put(0.70283473,0.06214113){\makebox(0,0)[lb]{\smash{4}}}%
+    \put(0.84709408,0.06214113){\makebox(0,0)[lb]{\smash{5}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{simulation_length.pdf}}%
+    \put(0.0397227,0.10205278){\makebox(0,0)[lb]{\smash{2.15}}}%
+    \put(0.06280419,0.20509493){\makebox(0,0)[lb]{\smash{2.2}}}%
+    \put(0.0397227,0.30813736){\makebox(0,0)[lb]{\smash{2.25}}}%
+    \put(0.06280419,0.4111795){\makebox(0,0)[lb]{\smash{2.3}}}%
+    \put(0.0397227,0.51422193){\makebox(0,0)[lb]{\smash{2.35}}}%
+    \put(0.06280419,0.61726465){\makebox(0,0)[lb]{\smash{2.4}}}%
+    \put(0.0397227,0.7203068){\makebox(0,0)[lb]{\smash{2.45}}}%
+    \put(0.06280419,0.82334923){\makebox(0,0)[lb]{\smash{2.5}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{simulation_length.pdf}}%
+  \end{picture}%
+\endgroup%

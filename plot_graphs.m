@@ -1,4 +1,4 @@
-function plot_graphs(hole_mat, fillet_mat)
+function plot_graphs(hole_mat, fillet_mat, fillet2_mat)
 % PLOT_GRAPHS - plot graphs and process data for report
 
 % Value/error format.
@@ -16,6 +16,11 @@ data = load(fillet_mat);
 s = data.stress';
 rd = data.normalised_radius;
 Hd = data.normalised_height;
+
+data = load(fillet2_mat);
+s_LH = data.stress;
+LH = data.normalised_length;
+
 
 %% 1a. Calculate strain concentrations by fitting gradient.
 Ke = zeros(1, size(e_all,1));
@@ -84,6 +89,7 @@ g.Location = 'northwest';
 
 %% 3a. Calculate Stress Concentration
 Ks = s/100;
+Ks_LH = s_LH/100;
 
 %% 3b. Fit Ks = b_0(r/d)^b_1
 b = zeros(2,length(Hd));
@@ -102,7 +108,18 @@ end
 b(1,:) = 10.^b(1,:);
 b_e(1,:) = log(10)*b(1,:).*b_e(1,:);
 
-%% 4a. Tabulate stress concentration plots
+%% 3c. Find confidence limits for mean Ks for different lengths.
+Ks_LH_mean = zeros(1,length(LH)-2);
+Ks_LH_lim = zeros(1,length(LH)-2);
+for i = 1:length(LH)-2
+    n = length(LH)-i;
+    Ks_LH_mean(i) = mean(Ks_LH(1+i:end));
+    Ks_LH_std = std(Ks_LH(1+i:end));
+    Ks_LH_se = Ks_LH_std/sqrt(n);
+    Ks_LH_lim(i) = Ks_LH_mean(i) + tinv(0.05, n-1)*Ks_LH_se;
+end
+
+%% 4a. Tabulate stress concentration models
 tab = cell(length(Hd),5);
 for i = 1:length(Hd)
     tab{i,1} = sprintf('%.1f', Hd(i));
@@ -116,8 +133,21 @@ names = {'H_d', 'a', 'b', 'R2', 'p'};
 tab = cell2table(tab, 'Variablenames', names);
 disp(tab);
 
+%% 4b. Tabulate confidence limits for mean Ks for differnt lengths
+tab = cell(length(LH)-2,4);
+for i = 1:length(LH)-2
+    tab{i,1} = sprintf('%.1f', LH(i));
+    tab{i,2} = sprintf('%.5f', Ks_LH_mean(i));
+    tab{i,3} = sprintf('%.5f', Ks_LH_lim(i));
+    tab{i,4} = sprintf('%.5f', Ks_LH(i));
+    tab{i,5} = sprintf('%.2e', Ks_LH_lim(i)-Ks_LH(i));
+end
 
-%% 4b. Plot stress concentration against r/d on a log-log scale.
+names = {'L_H', 'Ks_mean', 'Ks_lim', 'Ks', 'delta'};
+tab = cell2table(tab, 'Variablenames', names);
+disp(tab);
+
+%% 4c. Plot stress concentration against r/d on a log-log scale.
 sz = [250 250];
 sc = 0.7;
 f = figure();
@@ -162,14 +192,15 @@ ylabel(ax, 'Ks');
 g = legend(ax, names);
 g.Location = 'northeast';
 
-
-%% 4b. Plot stress concentration against r/d on a linear scale.
+%% 4d. Plot stress concentration against r/d on a linear scale.
 sz = [250 250];
 sc = 0.7;
 f = figure();
 f.Position(3:4) = sz/sc;
 ax = axes(f);
 ax.Position = [sqrt(sc)*(1-sc) sqrt(sc)*(1-sc) sc sc];
+ax.XMinorTick = 'on';
+ax.YMinorTick = 'on';
 hold(ax, 'on');
 line_colour = lines(length(Hd));
 
@@ -205,5 +236,25 @@ xlabel(ax, 'r/d');
 ylabel(ax, 'Ks');
 g = legend(ax, names);
 g.Location = 'northeast';
+
+%% 4e. Plot stress concentration against L/H on a linear scale.
+sz = [250 250];
+sc = 0.7;
+f = figure();
+f.Position(3:4) = sz/sc;
+ax = axes(f);
+ax.Position = [sqrt(sc)*(1-sc) sqrt(sc)*(1-sc) sc sc];
+ax.XMinorTick = 'on';
+ax.YMinorTick = 'on';
+hold(ax, 'on');
+
+% Plot datapoints.
+P = scatter(ax, LH(1:10), Ks_LH(1:10));
+P.Marker = 'x';
+P.LineWidth = 1;
+
+% Label axes.
+xlabel(ax, 'L/H');
+ylabel(ax, 'Ks');
 end
 
