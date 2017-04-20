@@ -524,20 +524,20 @@ effectively infinite to finite values.
 Gauge 2 measured the nominal strain under axial load and gauge 1 is
 perpendicular at the same location, suggesting the relationship between the
 two strains can be described by the Poisson effect. Substituting
-$\epsilon_{nom}$ into $\epsilon_1$ yields the following:
+$\epsilon_{nom}$ and $\epsilon_1$ into \eqref{eq:poisson} yields the following:
 \begin{equation*}
     \nu = -\frac{\epsilon_1}{\epsilon_{nom}} = -K_{\epsilon_1}
 \end{equation*}
 
 Therefore, Poisson's ratio for the plate used in the experiment can be obtained
 from Table~\vref{tab:strain-conc}, which suggests a 95\% confidence interval
-for $\nu$: $0.314\pm0.016$. Assuming the plate was a made from machined
-aluminium, a sensible alloy choice would have been 6086. According to the
-American Society for Metals~\cite{asm1978metals}, Aluminium 6086 and similar
-alloys have a Poisson's ratio of 0.33 at room temperature, which is contained in
-the 95\% confidence interval for Poisson's ratio estimated empirically. At the
-5\% level of significance the measured Poisson's ratio did not differ from the
-true Poisson's ratio of the material.
+for $\nu$: $0.314\pm0.016$. Assuming the plate was made from machined aluminium,
+a sensible alloy choice would have been 6086. According to the American Society
+for Metals~\cite{asm1978metals}, Aluminium 6086 and similar alloys have a
+Poisson's ratio of 0.33 at room temperature, which is contained in the 95\%
+confidence interval for Poisson's ratio estimated empirically. At the 5\% level
+of significance the measured Poisson's ratio did not differ from the true
+Poisson's ratio of the material.
 
 Gauges 5, 6, 7 and 9 were located on the plate boundary, so the axial load
 form of Hooke's law applied. Substituting \eqref{eq:hooke-axial} into 
@@ -593,7 +593,7 @@ measurement of the overall stress concentration factor in the plate.
 \end{figure}
 
 The maximum stress recorded in Figure~\ref{fig:experiment-simulation} was
-4.306~\MPa and the far-field stress applied was 100~\MPa. Applying 
+4.310~\MPa and the far-field stress applied was 100~\MPa. Applying 
 \eqref{eq:stress-conc} yielded a numerical prediction of the stress
 concentration factor. Another prediction was obtained by plugging the dimensions
 of the plate in Figure~\ref{fig:experiment-dims} into the analytical equation,
@@ -615,7 +615,7 @@ Table~\ref{tab:stress-conc-comparison}.
         }
             \toprule
             Analytical & $K_{\sigma_t}$ &    {4.250}    \\
-            Numerical  & $K_{\sigma_t}$ &    {4.306}    \\
+            Numerical  & $K_{\sigma_t}$ &    {4.310}    \\
             Empirical  & $K_{\sigma_7}$ & 4.564\pm0.103 \\
             \bottomrule
         \end{tabular}
@@ -640,13 +640,13 @@ and different measurements of the far field stress.
 
 Equation~\eqref{eq:hooke-axial}---Hooke's law under axial load---only applies
 to members homogeneous in the axial direction. However, the plate may not have a
-constant thickness, particularly at the machined edges of the plate. Although 
-instructions warn against tensioning the plate beyond \num{1000e-6} strain to
-avoid plastic deformation, previous groups may have over-tensioned the plate.
-The most stressed region at the location of gauge 7 would be the first to yield
-and consequently the thinnest region. The thinnest regions are subjected a
-greater stress concentrations which the analytical model and \BEM do not account
-for. The argument also applies to the width of the plate.
+constant thickness, particularly at the machined edges. Although instructions
+warn against tensioning the plate beyond \num{1000e-6} strain to avoid plastic
+deformation, previous groups may have over-tensioned the plate. The most
+stressed region at the location of gauge 7 would be the first to yield and
+consequently the thinnest region. The thinnest regions are subjected a greater
+stress concentrations which the analytical model and \BEM do not account for.
+The argument also applies to the width of the plate.
 
 Strain gauges increase in resistance as strain increases. The constant of
 proportionality by which they change is calibrated upon installation, but over
@@ -787,8 +787,8 @@ ratio requires using a larger radius for the shoulder fillet.
 In industry, engineers use more complete charts of a similar form to the one in
 Figure~\ref{fig:simulation-extrapolated} to specify the geometry of the part
 they are designing. It is more likely the ratio $H/d$ would be driving the
-dimension of a shoulder fillet feature---on a shaft of two diameters for
-example. The radius can then be specified to meet the stress concentration
+dimension of a shoulder fillet feature---on a shaft with a change in diameter
+for example. The radius can then be specified to meet the stress concentration
 factor requirement after considering the loads and failure criteria of the
 material. An example of such a chart is referenced in
 Section~\ref{sec:stress-conc} and referenced again 
@@ -842,9 +842,9 @@ reduction in stress concentration was significant at the 5\% level.
             4.0 & 2.49916 & 2.49960 & -4.37e-4 \\
             4.5 & 2.49911 & 2.49940 & -2.87e-4 \\
             5.0 & 2.49903 & 2.49940 & -3.66e-4 \\
-            6.0 & 2.49891 & 2.49930 & -3.85e-4 \\
-            7.0 & 2.49861 & 2.49930 & -6.94e-4 \\
-            8.0 & 2.49651 & 2.49940 & -2.89e-3 \\
+            % 6.0 & 2.49891 & 2.49930 & -3.85e-4 \\
+            % 7.0 & 2.49861 & 2.49930 & -6.94e-4 \\
+            % 8.0 & 2.49651 & 2.49940 & -2.89e-3 \\
             \bottomrule
         \end{tabular}
         \begin{tablenotes}
@@ -855,7 +855,7 @@ reduction in stress concentration was significant at the 5\% level.
     \end{threeparttable}
 \end{table}
 
-Consequently, the models in Figure~\vref{fig:simulation-extrapolated} are not a
+Consequently, the model in Figure~\vref{fig:simulation-extrapolated} is not a
 good fit when $L/H \leq 3$. Similar length constraints will apply for different
 $H/d$ and $r/d$ ratios to the respective 2.0 and 0.10 values chosen for this
 analysis.
@@ -884,8 +884,8 @@ for the same fillet radii. Engineers can use charts and tables to specify the
 required fillet radii for a particular part to meet loading requirements.
 
 The models used and relationships derived in this report apply to plates of a
-sufficient length. When the ratio of the length over the width of plate is 3 or
-less, alternative models must be devised.
+sufficient length. For plates with shoulder fillets, when the ratio of the
+length over the width of plate is 3 or less, alternative models must be devised.
 
 % References.
 \printbibliography
