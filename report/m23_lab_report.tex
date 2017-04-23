@@ -580,10 +580,10 @@ These are displayed in Table~\ref{tab:stress-conc}.
     \end{threeparttable}
 \end{table}
 
-Looking at the contour plot from the simulation in 
-Figure~\ref{fig:experiment-simulation} reveals the maximum stress coincided
-with the location of gauge 7. $K_{\sigma_7}$ is an empirical
-measurement of the overall stress concentration factor in the plate.
+The contour plot from the simulation in Figure~\ref{fig:experiment-simulation} 
+reveals the maximum stress coincided with the location of gauge 7. Therefore,
+$K_{\sigma_7}$ must be an empirical measurement of the overall stress
+concentration factor in the plate.
 
 \begin{figure}[h]
     \centering
@@ -644,7 +644,7 @@ constant thickness, particularly at the machined edges. Although instructions
 warn against tensioning the plate beyond \num{1000e-6} strain to avoid plastic
 deformation, previous groups may have over-tensioned the plate. The most
 stressed region at the location of gauge 7 would be the first to yield and
-consequently the thinnest region. The thinnest regions are subjected a greater
+consequently the thinnest region. The thinnest regions are subjected to greater
 stress concentrations which the analytical model and \BEM do not account for.
 The argument also applies to the width of the plate.
 
@@ -786,7 +786,7 @@ ratio requires using a larger radius for the shoulder fillet.
 
 In industry, engineers use more complete charts of a similar form to the one in
 Figure~\ref{fig:simulation-extrapolated} to specify the geometry of the part
-they are designing. It is more likely the ratio $H/d$ would be driving the
+they are designing. It is more likely the ratio $H/d$ would be the driving
 dimension of a shoulder fillet feature---on a shaft with a change in diameter
 for example. The radius can then be specified to meet the stress concentration
 factor requirement after considering the loads and failure criteria of the
@@ -799,14 +799,16 @@ it's width. The plate in Figure~\vref{fig:H/d=2.0-r/d=0.10} was modelled with
 $H/d$ at 2.0, $r/d$ at 0.10, $L/d$ at 10 and yielded a stress concentration
 factor of 2.4998.
 
-Figure~\ref{fig:simulation-results-length} indicates the stress concentration
+Figure~\vref{fig:simulation-results-length} suggests the stress concentration
 factor remained largely constant when \mbox{$L/H > 3$}, accounting for numerical
-noise. When \mbox{$L/H > 3$}, the mean for $K_{\sigma_t}$ was 2.4994 with a
-one-tailed 95\% lower confidence limit of 2.4992, derived using the standard
-error for $K_{\sigma_t}$ including data when $L/H$ was 6, 7, 8, 9 and 10.
+noise.
+
+When \mbox{$L/H > 3$}, the mean for $K_{\sigma_t}$ was 2.4994 with a
+one-tailed 95\% lower confidence limit of 2.4992. The mean included included
+data when $L/H$ was 6, 7, 8, 9 and 10.
 Table~\vref{tab:simulation-results-length} lists the confidence limits for all
-values tested and confirms 3 was the largest $L/H$ ratio for which the
-reduction in stress concentration was significant at the 5\% level.
+values tested and confirms 3 was the largest $L/H$ ratio for which the reduction
+in stress concentration was significant at the 5\% level.
 
 \begin{table}[h]
     \small
